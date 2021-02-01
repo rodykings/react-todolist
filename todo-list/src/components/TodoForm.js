@@ -9,7 +9,7 @@ function TodoForm(props) {
 
     const onClick = e =>{ 
         e.preventDefault();      
-        const randomNumber = Math.round(Math.random*10000)
+        const randomNumber = Math.round(Math.random()*10000); 
         props.onClick({id: randomNumber, text: input, isDone: false}); 
         setInput('');
     } 

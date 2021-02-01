@@ -6,22 +6,28 @@ import TodoList from "./TodoList";
 function Todo() {
   const [taskList, setTaskList] = useState([]);
 
-  const removeElement = id => { 
-      console.log(id); 
-  } 
+  const removeElement = (id) => { 
+      const newTaskList = taskList.filter(element => {
+        return element.id !== id;
+      });  
+      setTaskList(newTaskList);
+  };
 
-  const onClickAddTask = (inputValue) => {   
-    const newTaskList = [inputValue, ...taskList]; 
+  const onClickAddTask = (inputValue) => {
+    const newTaskList = [inputValue, ...taskList];
     setTaskList(newTaskList);
   };
 
   return (
     <div>
       <TodoForm onClick={onClickAddTask} />
-      <TodoList 
+      <ul>
+        <TodoList 
             taskList={taskList} 
-            removeElement={removeElement}
+            removeElement={removeElement} 
+
         />
+      </ul>
     </div>
   );
 }
