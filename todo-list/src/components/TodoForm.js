@@ -2,14 +2,15 @@ import React, {useState} from 'react'
 
 function TodoForm(props) {    
     const [input, setInput] = useState('');  
-
-    const updateInput = e =>{ 
+    
+    const onChangeInput= e =>{  
         setInput(e.target.value); 
-    } 
+    }   
 
-    const onClick = e =>{
-        e.preventDefault();     
-        props.onClick({'text':input}); 
+    const onClick = e =>{ 
+        e.preventDefault();      
+        const randomNumber = Math.round(Math.random*10000)
+        props.onClick({id: randomNumber, text: input, isDone: false}); 
         setInput('');
     } 
 
@@ -19,7 +20,7 @@ function TodoForm(props) {
                 className="form-input"  
                 value={input}   
                 placeholder="What do you wanna do?" 
-                onChange={updateInput}
+                onChange={onChangeInput}
             />  
             <button onClick={onClick}>Add task</button>
         </form>

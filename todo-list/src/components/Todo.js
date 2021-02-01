@@ -1,19 +1,27 @@
 import React, { useState } from "react";
-import TodoForm from "./TodoForm"; 
-import TodoList from "./TodoList"; 
+import { FiToggleLeft } from "react-icons/fi";
+import TodoForm from "./TodoForm";
+import TodoList from "./TodoList";
 
 function Todo() {
   const [taskList, setTaskList] = useState([]);
 
-  const onClickAddTask = (inputValue) => {
-    setTaskList([inputValue, ...taskList]);
+  const removeElement = id => { 
+      console.log(id); 
+  } 
+
+  const onClickAddTask = (inputValue) => {   
+    const newTaskList = [inputValue, ...taskList]; 
+    setTaskList(newTaskList);
   };
 
   return (
     <div>
       <TodoForm onClick={onClickAddTask} />
-      <TodoList taskList={taskList}/>
-
+      <TodoList 
+            taskList={taskList} 
+            removeElement={removeElement}
+        />
     </div>
   );
 }
