@@ -6,7 +6,9 @@ function TodoList(props) {
     return props.taskList.map((item) =>{   
         return ( 
             <li> 
-                <FiCircle /> 
+                <FiCircle 
+                    onClick={() => props.crossElement(item.id)}
+                /> 
                 <GoX 
                     onClick={() => props.removeElement(item.id)}
                 /> 
