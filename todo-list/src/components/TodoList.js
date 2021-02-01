@@ -1,10 +1,17 @@
 import React from 'react'
 
-function TodoList() {
+function TodoList(props) {  
+
+    const renderList = props.taskList.map((item) =>{  
+        return ( 
+            <li>{item.text}</li> 
+        )
+    });   
+
     return (
-        <div>
-            
-        </div>
+        <ul> 
+            {renderList}
+        </ul>
     )
 }
 

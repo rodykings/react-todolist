@@ -9,7 +9,7 @@ function TodoForm(props) {
 
     const onClick = e =>{
         e.preventDefault();     
-        props.onClick(input); 
+        props.onClick({'text':input}); 
         setInput('');
     } 
 
