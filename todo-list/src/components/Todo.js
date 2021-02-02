@@ -16,10 +16,8 @@ function Todo() {
     let element = taskList.find(element => { return element.id === id}); 
     let newTaskList = taskList.filter(element => {return element.id !== id});
     element.isDone = !element.isDone; 
-    console.log(element.isDone)
     newTaskList = [element, ...newTaskList];  
     setTaskList(newTaskList); 
-    console.log(taskList)
   }
 
   const addTask = (inputValue) => {
