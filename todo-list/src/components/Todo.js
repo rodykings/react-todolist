@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
-import TodoList from "./TodoList";
+import TodoList from "./TodoList";  
+import ListGroup from 'react-bootstrap/ListGroup'; 
 
 function Todo() {
   const [taskList, setTaskList] = useState([]);
@@ -32,7 +33,8 @@ function Todo() {
         <TodoList 
             taskList={taskList} 
             removeElement={removeElement} 
-            crossElement={crossElement}
+            crossElement={crossElement} 
+            className="TodoList"
         />
       </ul>
     </div>

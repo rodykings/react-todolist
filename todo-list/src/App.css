@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); 
+
+*{
+  margin: 0; 
+}
+
+.app{
+  font-family: 'Nanum Gothic', sans-serif;
+  background: rgb(204, 204, 204); 
+  text-align: center; 
+  padding: 2em; 
+  width: 50%; 
+}
+
+.title{
+  margin-bottom: 3em; 
+}
