@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";  
-import ListGroup from 'react-bootstrap/ListGroup'; 
 
 function Todo() {
   const [taskList, setTaskList] = useState([]);
@@ -16,9 +15,11 @@ function Todo() {
   const crossElement = (id) => {
     let element = taskList.find(element => { return element.id === id}); 
     let newTaskList = taskList.filter(element => {return element.id !== id});
-    element.isDone = !element.idDone; 
+    element.isDone = !element.isDone; 
+    console.log(element.isDone)
     newTaskList = [element, ...newTaskList];  
-    setTaskList(newTaskList);
+    setTaskList(newTaskList); 
+    console.log(taskList)
   }
 
   const addTask = (inputValue) => {
@@ -29,14 +30,12 @@ function Todo() {
   return (
     <div>
       <TodoForm onClick={addTask} />
-      <ul>
         <TodoList 
             taskList={taskList} 
             removeElement={removeElement} 
             crossElement={crossElement} 
             className="TodoList"
         />
-      </ul>
     </div>
   );
 }
