@@ -33,4 +33,6 @@ npm install
 npm start
 ```
 ## Images 
-![](https://i.imgur.com/C5Xxzku.png). 
+<p align="center"> 
+  <img src="https://i.imgur.com/C5Xxzku.png" alt="project-preview"> 
+</p> 
