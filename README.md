@@ -1,5 +1,5 @@
 <p align="center"> 
-  <h3 align="center"> react-todolist </h3> 
+  <h3 align="center"> REACT-TODOLIST </h3> 
   <p align="center"> Ordinary todolist built with react and material ui </p> 
   <p align="center"> 
     <a href="https://reactjs.org/"> 
