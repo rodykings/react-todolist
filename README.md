@@ -1,12 +1,29 @@
-# react-todolist
+<p align="center"> 
+  <h3 align="center"> react-todolist </h3> 
+  <p align="center"> Ordinary todolist built with react and material ui </p> 
+  <p align="center"> 
+    <a href="https://reactjs.org/"> 
+      <img src="https://img.shields.io/badge/frontend-react-inactive&?style=for-the-badge&logo=react" alt="frontend-dev-react">
+    </a> 
+    <a href="https://material-ui.com/"> 
+      <img src="https://img.shields.io/badge/DESIGN-MATERIAL--UI-red&?style=for-the-badge&logo=Material-UI" alt="design-material-ui"> 
+    </a> 
+  </p>
+</p> 
+
+## Introduction 
 This is a todo list made with react and material ui in order to understand react better. 
 There is no database, so the data is not persistent.  
 
-![](https://i.imgur.com/C5Xxzku.png). 
+## Getting started 
 
-## How to run 
+### Prerequisites 
 
-Use the npm commands to run this project. If `npm` is missing in your computer, get the npm [here](https://www.npmjs.com/get-npm).  
+Use the npm commands to run this project.  
+If `npm` is missing in your computer, get the npm [here](https://www.npmjs.com/get-npm).  
+
+### Usage 
+
 - Install the dependencies.  
 ```bash
 npm install
@@ -15,3 +32,5 @@ npm install
 ```bash 
 npm start
 ```
+## Images 
+![](https://i.imgur.com/C5Xxzku.png). 
