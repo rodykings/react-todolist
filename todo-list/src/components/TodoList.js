@@ -8,12 +8,12 @@ function TodoList(props) {
 
   return props.taskList.map((item) => {
     return (
-      <Card className={classes.taskCard}>
+      <Card className={classes.taskCard} key={item.id}>
         <FiCircle
           onClick={() => props.crossElement(item.id)}
           className={classes.fiCircleTask}
         />
-        <span 
+        <span
           className={item.isDone === true ? "crossedElement" : ""}
           >{item.text}</span>
         <Button
