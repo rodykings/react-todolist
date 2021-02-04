@@ -14,7 +14,7 @@ function TodoList(props) {
           className={classes.fiCircleTask}
         />
         <span 
-          class={item.isDone === true ? "crossedElement" : ""}
+          className={item.isDone === true ? "crossedElement" : ""}
           >{item.text}</span>
         <Button
           variant="contained"

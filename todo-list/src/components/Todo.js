@@ -1,9 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";  
 
 function Todo() {
   const [taskList, setTaskList] = useState([]);
+
+
+  useEffect(() => {
+      getLocalTodos();
+  }, [])
+
+  useEffect(() => {
+    saveLocalTodos();
+  }, [taskList])
+
+
+  const saveLocalTodos = () =>{
+    localStorage.setItem('todos', JSON.stringify(taskList));
+  }
+
+ const getLocalTodos = () =>{
+    if(localStorage.getItem('todos') === null){
+      localStorage.setItem('todos', JSON.stringify([]));
+    }else{
+      let todoLocal = JSON.parse(localStorage.getItem('todos'));
+      setTaskList(todoLocal);
+    }
+  }
 
   const removeElement = (id) => { 
       const newTaskList = taskList.filter(element => {
