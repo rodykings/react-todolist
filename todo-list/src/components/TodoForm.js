@@ -21,16 +21,16 @@ function TodoForm(props) {
   return (
     <form>
       <TextField
-        className="form-input"
         variant="outlined"
         label="Type your goal."
         size="small"
         value={input}
         onChange={onChangeInput} 
-        className={classes.inputTask}
+        className={'form-input ' + classes.inputTask}
       />
       <Button
         onClick={onClick}
+        type="submit"
         variant="contained"
         size="medium"
         className={classes.addTaskButton}
