@@ -11,10 +11,10 @@ function App() {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography className={classes.typoBar}> Todo List </Typography>
-          <span class="author"><a href="www.github.com/Jumaruba">Made with love by Juliane Marubayashi</a></span>
+          <span className="author"><a href="www.github.com/Jumaruba">Made with love by Juliane Marubayashi</a></span>
         </Toolbar>
       </AppBar>
-      <div class="center">
+      <div className="center">
         <Card className={classes.AppCard}>
           <link
             rel="stylesheet"
